@@ -22,7 +22,10 @@
                     <small># 1</small>
                 </div>
                 <div class="img">
-                    <img src="" alt="">
+                    <img src="https://pokeres.bastionbot.org/images/pokemon/1.png" alt="">
+                </div>
+                <div class="type">
+                    <span>Grass</span>
                 </div>
                 <button class="favorite">
                     <div class="heart">
@@ -32,6 +35,17 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const card = document.querySelector('.card')
+        const cards = document.querySelector('.cards')
+
+        for (let i = 0; i < 30; i++) {
+            const clone = card.cloneNode(true)
+            cards.appendChild(clone)
+        }
+    </script>
+
 </body>
 
 </html>
