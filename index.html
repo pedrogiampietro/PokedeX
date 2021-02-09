@@ -16,75 +16,11 @@
             <h1>PokedeX</h1>
         </div>
         <div class="cards">
-            <div class="card">
-                <div class="title">
-                    <h2>Bulbasaur</h2>
-                    <small># 1</small>
-                </div>
-                <div class="img bg-water">
-                    <img src="https://pokeres.bastionbot.org/images/pokemon/1.png" alt="">
-                </div>
-                <div class="type water">
-                    <span>Grass</span>
-                </div>
-                <button class="favorite">
-                    <div class="heart">
 
-                    </div>
-                </button>
-            </div>
         </div>
     </div>
 
-    <script>
-        const card = document.querySelector('.card')
-        const cards = document.querySelector('.cards')
-
-        for (let i = 0; i < 30; i++) {
-            const clone = card.cloneNode(true)
-            cards.appendChild(clone)
-        }
-
-
-        const colors = {
-            fire: '#FDDFDF',
-            grass: '#DEFDE0',
-            eletric: '#FCF7DE',
-            water: '#DEF3FD',
-            ground: '#FDE7DA',
-            rock: '#D5D5D4',
-            fairy: '#FCEAFF',
-            poison: '#98D7A5',
-            bug: '#F8D5A3',
-            dragon: '#97B3E6',
-            psychic: '#EAEDA1',
-            flying: '#F5F5F5',
-            fighting: '#E6E0D4',
-            normal: '#F5F5F5'
-        }
-
-        const variables = []
-        const style = []
-
-        for (let key in colors) {
-
-            variables.push(`--${key}: ${colors[key]}`)
-
-            const css = `
-                .bg-${key} {
-                    background: linear-gradient( to top right, var(--${key}), var(--card-bg) 25%);
-                }
-                .${key} {
-                    background-color: ${colors[key]}
-                }
-            `;
-
-            style.push(css)
-        }
-
-        console.log(variables.join(''))
-        console.log(style.join(''))
-    </script>
+    <script src="./scripts.js"></script>
 
 </body>
 
